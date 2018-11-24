@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+/*最大边框*/
+.wrap {
+	padding-bottom: .98rem;
+	box-sizing: border-box;
+	width: 7.5rem;
+	height: auto;
+}
+/*public 隔开上线 box*/
+.publicSeptum {
+	width: 100%;
+	height: .2rem;
+}
+/*内容区域 wrap*/
+.contentWrap {
+	width: 7.5rem;
+	height: auto;
+}
+/*000*/
+/*Wrap,背景图包括（头部:height:.88rem;）*/
+.contentTopWrap {
+	padding-top: .88rem;
+	box-sizing: border-box;
+	width: 7.5rem;
+	height: 5.42rem;
+	background: url(../img/home/homeTopImg.png) no-repeat 0 0;
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	/*number溢出时，隐藏*/
+	overflow: hidden;
+}
+/*提现、收益 box*/
+.contentTopBox {
+	width: 7.5rem;
+	height: 4.54rem;
+	
+}
+/*提现box*/
+.putForwardBox {
+	width: 7.5rem;
+	height: 2.35rem;
+}
+/*title*/
+.putForwardBoxTitle {
+	padding: .32rem .3rem 0;
+	box-sizing: border-box;
+	width: 7.5rem;
+	height: .79rem;
+	font: .32rem/.32rem "微软雅黑";
+	color: #fff;
+	letter-spacing: .02rem;
+}
+/*number*/
+.putForwardBoxNumber {
+	position: relative;
+	padding: 0 .3rem;
+	box-sizing: border-box;
+	width: 7.5rem;
+	min-height: .64rem;
+	font: .34rem/.64rem "微软雅黑";
+	color: #fff;
+	letter-spacing: .01rem;
+}
+/*num*/
+.putFBNumber {
+	display: block;
+	word-break: break-all;
+	width: 5.1rem;
+	max-height: 2.5rem;
+}
+/*button*/
+.putForwardBoxButton {
+	position: absolute;
+	top: 0;
+	right: .3rem;
+	box-sizing: border-box;
+	width: 1.7rem;
+	height: .64rem;
+	border-radius: .05rem;
+	border: .02rem solid #fff;
+	font: .26rem/.6rem "微软雅黑";
+	text-align: center;
+	letter-spacing: .01rem;
+}
+/*收益 box*/
+.profitBox {
+	width: 7.5rem;
+	height: 2.19rem;
+}
+/*title*/
+.profitBoxTitle {
+	padding: 0 .3rem;
+	box-sizing: border-box;
+	width: 7.5rem;
+	height: .65rem;
+	font: .32rem/.32rem "微软雅黑";
+	color: #fff;
+	letter-spacing: .02rem;
+}
+/*左*/
+.publicProfitLeft {
+	float: left;
+	display: block;
+	width: 3.4rem;
+	height: auto;
+	word-break: break-all;
+	font: .34rem/.34rem "微软雅黑";
+	text-align: left;
+}
+/*右*/
+.publicProfitRight {
+	float: right;
+	display: block;
+	width: 3.4rem;
+	height: auto;
+	word-break: break-all;
+	font: .34rem/.34rem "微软雅黑";
+	text-align: right;
+}
+/*111*/
+/*公告 wrap*/
+.noticeWrap {
+	width: 7.5rem;
+	height: .96rem;
+	background-color: #fff;
+	overflow: hidden;
+}
+/*name*/
+.noticeName {
+	float: left;
+	position: relative;
+	width: 1.6rem;
+	height: .96rem;
+}
+/*'公告' img*/
+.noticeName img {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: .3rem;
+	margin: auto 0;
+	width: .7rem;
+	height: .33rem;
+}
+/*公告 data*/
+.noticeDataBox {
+	float: left;
+	width: 5.9rem;
+	height: .33rem;
+}
+/*项（循环）*/
+.noticeDataTrem {
+	position: relative;
+	font: .24rem/.96rem "微软雅黑";
+	letter-spacing: .02rem;
+	color: #333;
+	padding-right: .36rem;
+    box-sizing: border-box;
+}
+/*">" image*/
+.publicRightImg {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: .3rem;
+	bottom: 0;
+	margin: auto 0;
+	width: .1rem;
+	height: .18rem;
+}
+/*222*/
+/*用户功能 wrpa*/
+.userFunWrap {
+	padding: 0 0 .36rem .3rem;
+	box-sizing: border-box;
+	width: 7.5rem;
+	min-height: 3.57rem;
+	background-color: #fff;
+}
+/*行*/
+.publicUserFunThatsok {
+	margin-top: .1rem;
+	width: 6.9rem;
+	height: auto;
+}
+/*(兄弟元素)第一个无margin-top:0;*/
+.publicUserFunThatsok:first-child {
+	margin-top: 0;
+}
+
+/*'用户功能' 项*/
+.userFunTerm {
+	float: left;
+	width: 25%;
+	min-height: 1.56rem;
+}
+/*'用户功能' 图标 box*/
+.userFunTermIocnBox {
+	position: relative;
+	width: 100%;
+	height: 1.3rem;
+}
+/*'用户功能' 图标*/
+.userFunTermIocn {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+/*title*/
+.userFunTermTitle {
+	width: 100%;
+	text-align: center;
+	color: #333;
+	font: .24rem/.24rem "微软雅黑";
+	letter-spacing: .02rem;
+}
+
+/*退出 box*/
+.signOutButBox {
+	padding-top: .38rem;
+	box-sizing: border-box;
+	width: 7.5rem;
+	height: auto;
+}
+/*退出 按钮*/
+.signOutButton {
+	margin: 0 auto;
+	width: 2.96rem;
+	height: .82rem;
+	font: .25rem/.82rem "微软雅黑";
+	color: #fff;
+	text-align: center;
+	border-radius: .82rem;
+	letter-spacing: .02rem;
+	background-color: #fc5c14;
+}
+

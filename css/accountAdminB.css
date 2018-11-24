@@ -1,0 +1,65 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+/*最大边框*/
+.warpperB {
+	padding: .88rem 0 .98rem 0;
+	box-sizing: border-box;
+	width: 7.5rem;
+	height: auto;
+}
+/*内容*/
+.contentWrapB {
+	padding-left: .3rem;
+	box-sizing: border-box;
+	width: 7.5rem;
+	height: auto;	
+	background-color: #fff;
+}
+/*项*/
+.adminTermV {
+	position: relative;
+	box-sizing: border-box;
+	width: 7.2rem;
+	height: 1.32rem;	
+	font: .3rem/1.3rem "微软雅黑";
+	color: #333;
+	border-bottom: .02rem solid #e5e5e5;
+}
+/*（兄弟元素）最后一项，没有底部线*/
+.adminTermV:last-child {
+	border-bottom: none;
+}
+/*图标 box*/
+.adminTermIconBoxV {
+	float: left;
+	position: relative;
+	width: .79rem;
+	height: 1.3rem;
+}
+/*图标 */
+.adminTermIconV {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+}
+/*支付方式*/
+.paymentMethodV {
+	float: left;
+	width: 6.41rem;
+	height: 1.3rem;
+}
+/*跳转 图标*/
+.jumpIconV {
+	position: absolute;
+	top: 0;
+	right: .3rem;
+	bottom: 0;
+	margin: auto 0;
+    width: .16rem;
+    height: .27rem;
+}

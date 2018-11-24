@@ -1,0 +1,135 @@
+@charset "utf-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+/*最大边框*/
+.wrapperMW {
+	position: relative;
+	padding: .9rem 0 1.47rem 0;
+	box-sizing: border-box;
+	width: 7.5rem;
+	height: auto;
+}
+/*内容区域*/
+.contentWrapMW {
+	width: 7.5rem;
+	height: auto;
+}
+
+/*隔开上下box height：.02rem;*/
+.publicSeptum {
+	width: 7.5rem;
+	height: .2rem;
+}
+/*项 => 注意:public class*/
+.publicTermBoxMW {
+	position: relative;
+	padding-left: .3rem;
+	box-sizing: border-box;
+	width: 7.5rem;
+	height: 1.08rem;
+	background-color: #fff;
+}
+/*伪元素=>底部线*/
+.publicBottomLine:before {
+	content: " ";
+	box-sizing: border-box;
+	width: 6.9rem;
+	height: .02rem;
+	border-bottom: .02rem solid #e5e5e5;
+	position: absolute;
+	bottom: 0;
+	left: .3rem;
+	z-index: 1;
+}
+/*项 => 左*/
+.publicTermBoxLeftMW {
+	float: left;
+	width: 1.5rem;
+	height: 1.08rem;
+	font: .28rem/1.08rem "微软雅黑";
+	color: #666;
+	letter-spacing: .02rem;
+}
+/*项 => 右*/
+.publicTermBoxRightMW {
+	float: left;
+	padding-top: .18rem;
+	box-sizing: border-box;
+	width: 5.4rem;
+	height: 1.08rem;
+	font-size: .26rem;
+}
+/*public 输入框*/
+.publicTBDaRInputMW {
+	/**总:width: 5.4rem;**/
+	width: 5rem;
+	height: .7rem;
+	outline: none;
+	border: none;
+	font: .28rem/.7rem "微软雅黑";
+	letter-spacing: .01rem;
+	color: #333;
+}
+/*inout的提示文字 样式修改*/
+.publicTBDaRInputMW::-webkit-input-placeholder { /* WebKit browsers */ 
+	color: #c6c6c6; 
+	font-size: .24rem;
+	font-family: "微软雅黑";
+	letter-spacing: .02rem;
+} 
+.publicTBDaRInputMW:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+	color: #c6c6c6; 
+	font-size: .24rem;
+	font-family: "微软雅黑";
+	letter-spacing: .02rem;
+} 
+.publicTBDaRInputMW::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+	color: #c6c6c6; 
+	font-size: .24rem;
+	font-family: "微软雅黑";
+	letter-spacing: .02rem;
+} 
+.publicTBDaRInputMW:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+	color: #c6c6c6; 
+	font-size: .24rem;
+	font-family: "微软雅黑";
+	letter-spacing: .02rem;
+} 
+
+
+
+/*提示 text*/
+.tipsText {
+	padding-left: .3rem;
+	box-sizing: border-box;
+	width: 7.5rem;
+	height: .7rem;
+	font: .27rem/.7rem "微软雅黑";
+	color: #b7b7b7;
+	letter-spacing: .02rem;
+}
+
+
+/*确定按钮 wrap*/
+.determineWrapMW {
+	clear: both;
+	padding-top: 1rem;
+	box-sizing: border-box;
+	width: 7.5rem;
+	height: auto;
+}
+.determineMW {
+	margin: 0 auto;
+	width: 6.9rem;
+	height: .91rem;
+	font: .28rem/.91rem "微软雅黑";
+	text-align: center;
+	color: #fff;
+    letter-spacing: .02rem;
+    border-radius: .07rem;
+	background-color: #fc5c14;
+}
+
+

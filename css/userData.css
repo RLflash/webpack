@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/*最大边框*/
+.userWrap {
+	padding: .88rem 0 .98rem 0;
+	box-sizing: border-box;
+	width: 7.5rem;
+	height: auto;
+}
+/*public 隔开上线 box*/
+.publicSeptum {
+	width: 100%;
+	height: .2rem;
+}
+/*内容区域 wrap*/
+.userContentWrap {
+	width: 7.5rem;
+	height: auto;
+}
+/*项*/
+.userTremBox {
+	padding: 0 .3rem;
+	box-sizing: border-box;
+	margin-top: .2rem;
+	width: 7.5rem;
+	/*height: .8rem;*/
+	height: 1rem;
+	background-color: #fff; 
+}
+/*icon box*/
+.userTremIconBox {
+	float: left;
+	position: relative;
+	width: .56rem;
+	height: 100%;
+}
+/*icon*/
+.userTremIconBox img {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto 0;
+	background-color: #fff;
+}
+/*title*/
+.userTremTitleBox {
+	float: left;
+	width: 2rem;
+	height: 100%;
+	font: .28rem/1rem "微软雅黑";
+	letter-spacing: .02rem;
+	color: #333;
+}
+/*text*/
+.userTremTextBox {
+	float: right;
+	position: relative;
+	/*4.34rem*/
+	width: 4.3rem;
+	height: 100%;
+	font: .26rem/1rem "微软雅黑";
+	letter-spacing: .01rem;
+	color: #999;
+	text-align: right;
+}
+/*img*/
+.userRightImg {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto 0;
+	width: .16rem;
+	height: .27rem;
+}
