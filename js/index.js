@@ -1,6 +1,10 @@
 import $ from "./jquery-3.3.1.min.js"
 import {post} from "./public.js"
-
+import "./rem.js"
+import "./bottomNavJs.js"
+import "./indexcss.css"
+import "./public.css"
+import "./bottomNav.css"
 			$(function(){
 				post('index/index',null,'GET',function(data){	
 					$("#ktxye").html(data.data.user.credit1)

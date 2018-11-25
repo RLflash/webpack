@@ -13,21 +13,11 @@ module.exports = {　　
 		
 　　},
 　　output: {
-　　　　path: __dirname + "/public/js",
-　　　　filename: "[name].js"
+　　　　path:__dirname+"./dist/js",
+　　　　filename: "[name].js",
+		
 　　},
-	optimization: {
-	    splitChunks: {
-	      cacheGroups: {
-	        styles: {
-	          name: 'styles',
-	          test: /\.css$/,
-	          chunks: 'all',
-	          enforce: true
-	        }
-	      }
-	    }
-	  },
+	
 　　module: {
 　　　　rules: [{
 	　　　　　　　　test: /\.js$/,
@@ -35,22 +25,34 @@ module.exports = {　　
 	　　　　　　　　use: {
 	　　　　　　　　　　loader: 'babel-loader',
 	　　　　　　　　　　options: {
-	　　　　　　　　　　　　presets: ['babel-preset-es2015']
+	　　　　　　　　　　　　presets: ['babel-preset-es2015'],
+							
 	　　　　　　　　　　}
 	　　　　　　　　}
 	　　　　		},{
-	　　　　　　　　test: /\.css$/,　
-	　　　　　　　　use: [
-	            		MiniCssExtractPlugin.loader,
-				        {
-				        	loader:"css-loader",
-				        	options:{
-				        		minimize:true,
-				        		publicPath: './css'
-				        	}
-				        }
-					]
-　　　　			}]
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+            
+             
+            }
+          },
+          "css-loader"
+        ]
+      },{
+				
+            test:/\.(jpg|png|gif)$/,
+            use:[{
+                    loader:"url-loader",
+                    options:{
+                        limit:50,
+                        outputPath:"images"
+                    }
+                }]
+
+				}]
 　　},
 　　devServer: {
 　　　　inline:true,
@@ -61,7 +63,7 @@ module.exports = {　　
 　　　　new OpenBrowserPlugin({url:'http://localhost:804'}),
 　　　　new HtmlWebpackPlugin({
 			template:'./index.html',
-			filename:'index.html',
+			filename: "index.html",
 			inject: {
     			body: ['indexjs']
   			},
@@ -74,7 +76,8 @@ module.exports = {　　
 			chunks:['indexjs']
 		}),
 		new MiniCssExtractPlugin({
-      		filename: __dirname +"/css/1.css",
+      		filename: "../css/[name].css",
+     
     	})
 　　　	
 　　]
