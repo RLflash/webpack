@@ -1,1 +1,208 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title class="pageTopTitle" page-id="0">首页</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><link href="E:\code\webpack1/dist/css/indexjs.css" rel="stylesheet"></head><body><div class="wrap"><div class="headWrap"><span>金多多</span></div><div class="contentWrap"><div class="contentTopWrap"><div class="contentTopBox"><div class="putForwardBox"><p class="putForwardBoxTitle">可提现余额</p><div class="putForwardBoxNumber"><span class="putFBNumber" id="ktxye"></span><p class="putForwardBoxButton" onclick="window.location.href='./getmoney.html'">立即提现</p></div></div><div class="profitBox"><p class="profitBoxTitle"><span class="publicProfitLeft">总收益</span> <span class="publicProfitRight">今日收益</span></p><p class="profitBoxTitle clearfloat"><span class="publicProfitLeft" id="zsy"></span> <span class="publicProfitRight" id="today"></span></p></div></div></div><div class="noticeWrap"><p class="noticeName"><img src="img/home/noticeIcon.png" alt=""></p><div class="noticeDataBox" id="gmsgbox"></div></div><p class="publicSeptum"></p><div class="userFunWrap clearfloat"><div class="publicUserFunThatsok clearfloat"><div class="userFunTerm" onclick="window.location.href='./makemoney.html'"><p class="userFunTermIocnBox"><img class="userFunTermIocn" src="img/home/20181116001.png" style="width: .55rem;height: .51rem;"></p><p class="userFunTermTitle">开始赚钱</p></div><div class="userFunTerm" onclick="ShowErrorBox('该功能暂未开放')"><p class="userFunTermIocnBox"><img class="userFunTermIocn" src="img/home/20181116002.png" style="width: .43rem;height: .51rem;"></p><p class="userFunTermTitle">购买手机</p></div><div class="userFunTerm" onclick="window.location.href='./getmoneyrecord.html'"><p class="userFunTermIocnBox"><img class="userFunTermIocn" src="img/home/20181116003.png" style="width: .55rem;height: .47rem;"></p><p class="userFunTermTitle">提现记录</p></div><div class="userFunTerm" onclick="window.location.href='./newstudy.html'"><p class="userFunTermIocnBox"><img class="userFunTermIocn" src="img/home/20181116004.png" style="width: .54rem;height: .46rem;"></p><p class="userFunTermTitle">新手教学</p></div></div><div class="publicUserFunThatsok clearfloat"><div class="userFunTerm" onclick="window.location.href='./notice.html'"><p class="userFunTermIocnBox"><img class="userFunTermIocn" src="img/home/20181116005.png" style="width: .58rem;height: .58rem;"></p><p class="userFunTermTitle">公告</p></div><div class="userFunTerm" onclick="window.location.href ='./reverse.html'"><p class="userFunTermIocnBox"><img class="userFunTermIocn" src="img/home/20181121194930.png" style="width: .62rem;height: .62rem;"></p><p class="userFunTermTitle">对转</p></div><div class="userFunTerm" onclick="window.location.href='./income.html'"><p class="userFunTermIocnBox"><img class="userFunTermIocn" src="img/home/20181116007.png" style="width: .52rem;height: .55rem;"></p><p class="userFunTermTitle">收益说明</p></div><div class="userFunTerm" onclick="window.location.href='./myteam.html'"><p class="userFunTermIocnBox"><img class="userFunTermIocn" src="img/home/20181116008.png" style="width: .51rem;height: .57rem;"></p><p class="userFunTermTitle">我的团队</p></div></div></div><div class="signOutButBox"><p class="signOutButton" id="signOutBut">立即退出</p></div></div><div class="bottomNavWrap"><div class="bottomNavTerm"><p class="bottomNavIconBox" onclick="window.location.href='./index.html'"><img class="bottomNavIcon" src="img/bottomNav/2018111911.png"></p><p class="bottomNavTitle">首页</p></div><div class="bottomNavTerm" onclick="window.location.href='./finamanage.html'"><p class="bottomNavIconBox"><img class="bottomNavIcon" src="img/bottomNav/2018111921.png"></p><p class="bottomNavTitle bNavNoFontColor">金融理财</p></div><div class="bottomNavTerm" onclick="window.location.href='./userdata.html'"><p class="bottomNavIconBox"><img class="bottomNavIcon" src="img/bottomNav/2018111931.png"></p><p class="bottomNavTitle bNavNoFontColor">用户信息</p></div></div></div><style>body{backgrund:#fff}</style><script type="text/javascript" src="E:\code\webpack1/dist/indexjs.js"></script></body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title class="pageTopTitle" page-id="0">首页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		
+	</head>
+	<body>
+		<div class="wrap">
+			<!--头部Title,背景颜色class="headWrapColorOrange"-->
+			<div class="headWrap">
+				<!--<span class="returnImg" onclick="history.back(-1)"><img src="img/headWrap/topReturnKey.png"/></span>-->
+				<span>金多多</span>
+				<!--按钮 => 绝对定位-->
+				<!--<span class="hangSellButton" onclick="">设置</span>-->
+			</div>
+			<div class="contentWrap">
+				<!--Wrap,背景图包括（头部:height:.88rem;）-->
+				<div class="contentTopWrap">
+					<!--提现、收益 box-->
+					<div class="contentTopBox">
+						<!--提现、收益 box-->
+						<div class="putForwardBox">
+							<!--title-->
+							<p class="putForwardBoxTitle">可提现余额</p>
+							<!--number-->
+							<div class="putForwardBoxNumber">
+								<span class="putFBNumber" id="ktxye"></span>
+								<!--button,绝对定位-->
+								<p class="putForwardBoxButton"  onclick="window.location.href='./getmoney.html'">立即提现</p>
+							</div>
+						</div>
+						<!--总收益 box-->
+						<div class="profitBox">
+							<!--title-->
+							<p class="profitBoxTitle">
+								<span class="publicProfitLeft">总收益</span>
+								<span class="publicProfitRight">今日收益</span>
+							</p>
+							<!--number-->
+							<p class="profitBoxTitle clearfloat">
+								<span class="publicProfitLeft" id="zsy"></span>
+								<span class="publicProfitRight" id="today"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--公告 wrap-->
+				<div class="noticeWrap">
+					<!--name icon-->
+					<p class="noticeName"><img src="img/home/noticeIcon.png" alt="" /></p>
+					<!--公告 data-->
+					<div class="noticeDataBox" id="gmsgbox">
+						<!--项（循环）-->
+						<!--<p class="noticeDataTrem">
+							<span>关于会员提现申请驳回的通知1</span>
+						
+							<img class="publicRightImg" src="img/rightIcon.png"/>
+						</p>-->
+						
+					</div>
+				</div>
+				
+				
+				<!--隔开上下box height：.02rem;-->
+				<p class="publicSeptum"></p>
+				
+				
+				<!--用户功能 wrpa，
+					1、清除浮动class="clearfloat";
+				-->
+				<div class="userFunWrap clearfloat">
+					<!--第一行,
+						1、(兄弟元素)第一个无 margin-top: 0;
+					-->
+					<div class="publicUserFunThatsok clearfloat">
+						<!--'用户功能' 项-->
+						<div class="userFunTerm" onclick="window.location.href='./makemoney.html'">
+							<!--图标 box-->
+							<p class="userFunTermIocnBox">
+								<img class="userFunTermIocn" src="img/home/20181116001.png" style="width: .55rem;height: .51rem;"/>
+							</p>
+							<!--title-->
+							<p class="userFunTermTitle">开始赚钱</p>
+						</div>
+						<!--'用户功能' 项-->
+						<div class="userFunTerm" onclick="ShowErrorBox('该功能暂未开放')">
+							<!--图标 box-->
+							<p class="userFunTermIocnBox">
+								<img class="userFunTermIocn" src="img/home/20181116002.png" style="width: .43rem;height: .51rem;"/>
+							</p>
+							<!--title-->
+							<p class="userFunTermTitle">购买手机</p>
+						</div>
+						<!--'用户功能' 项-->
+						<div class="userFunTerm" onclick="window.location.href='./getmoneyrecord.html'">
+							<!--图标 box-->
+							<p class="userFunTermIocnBox">
+								<img class="userFunTermIocn" src="img/home/20181116003.png" style="width: .55rem;height: .47rem;"/>
+							</p>
+							<!--title-->
+							<p class="userFunTermTitle">提现记录</p>
+						</div>
+						<!--'用户功能' 项-->
+						<div class="userFunTerm" onclick="window.location.href='./newstudy.html'">
+							<!--图标 box-->
+							<p class="userFunTermIocnBox">
+								<img class="userFunTermIocn" src="img/home/20181116004.png" style="width: .54rem;height: .46rem;"/>
+							</p>
+							<!--title-->
+							<p class="userFunTermTitle">新手教学</p>
+						</div>
+					</div>
+					<!--第二行-->
+					<div class="publicUserFunThatsok clearfloat">
+						<!--'用户功能' 项-->
+						<div class="userFunTerm" onclick="window.location.href='./notice.html'">
+							<!--图标 box-->
+							<p class="userFunTermIocnBox">
+								<img class="userFunTermIocn" src="img/home/20181116005.png" style="width: .58rem;height: .58rem;"/>
+							</p>
+							<!--title-->
+							<p class="userFunTermTitle">公告</p>
+						</div>
+						<!--'用户功能' 项-->
+						<div class="userFunTerm" onclick="window.location.href ='./reverse.html'">
+							<!--图标 box-->
+							<p class="userFunTermIocnBox">
+								<img class="userFunTermIocn" src="img/home/20181121194930.png" style="width: .62rem;height: .62rem;"/>
+							</p>
+							<!--title-->
+							<p class="userFunTermTitle">对转</p>
+						</div>
+						<!--'用户功能' 项-->
+						<div class="userFunTerm" onclick="window.location.href='./income.html'">
+							<!--图标 box-->
+							<p class="userFunTermIocnBox">
+								<img class="userFunTermIocn" src="img/home/20181116007.png" style="width: .52rem;height: .55rem;"/>
+							</p>
+							<!--title-->
+							<p class="userFunTermTitle">收益说明</p>
+						</div>
+						<!--'用户功能' 项-->
+						<div class="userFunTerm" onclick="window.location.href='./myteam.html'">
+							<!--图标 box-->
+							<p class="userFunTermIocnBox">
+								<img class="userFunTermIocn" src="img/home/20181116008.png" style="width: .51rem;height: .57rem;"/>
+							</p>
+							<!--title-->
+							<p class="userFunTermTitle">我的团队</p>
+						</div>
+					</div>
+					
+				</div>
+				
+				<!--退出 按钮 box，样式-->
+				<div class="signOutButBox">
+					<p class="signOutButton" id="signOutBut">立即退出</p>
+				</div>	
+												
+			</div>
+			
+			
+			
+			<!-- <<< 底部 固定导航 wrap-->
+			<div class="bottomNavWrap">
+				<!--项，
+					1、点击时 font-color：class="bNavYseFontColor";
+					2、（未点击时）字体颜色:class="bNavNoFontColor";
+				-->
+				<div class="bottomNavTerm">
+					<!--icon box-->
+					<p class="bottomNavIconBox" onclick="window.location.href='./index.html'">
+						<img class="bottomNavIcon" src="img/bottomNav/2018111911.png" />
+					</p>
+					<!--title
+						1、（点击时）字体颜色:class="bNavYseFontColor";
+					-->
+					<p class="bottomNavTitle">首页</p>
+				</div>
+				<!--项-->
+				<div class="bottomNavTerm"  onclick="window.location.href='./finamanage.html'">
+					<!--icon box-->
+					<p class="bottomNavIconBox">
+						<img class="bottomNavIcon" src="img/bottomNav/2018111921.png" />
+					</p>
+					<!--title-->
+					<p class="bottomNavTitle bNavNoFontColor">金融理财</p>
+				</div>
+				<!--项-->
+				<div class="bottomNavTerm" onclick="window.location.href='./userdata.html'">
+					<!--icon box-->
+					<p class="bottomNavIconBox">
+						<img class="bottomNavIcon" src="img/bottomNav/2018111931.png" />
+					</p>
+					<!--title-->
+					<p class="bottomNavTitle bNavNoFontColor">用户信息</p>
+				</div>
+			</div>
+			<!--底部 固定导航 wrap >>> -->
+			
+		</div>
+		
+		
+	
+	</body>
+</html>

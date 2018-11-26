@@ -1,12 +1,14 @@
 @charset "utf-8";
 
 /*最大边框*/
+
 .wrap {
 	padding-bottom: .98rem;
 	box-sizing: border-box;
 	width: 7.5rem;
 	height: auto;
 }
+.editwrap{padding:0.2rem 0.3rem;background:#fff}
 /*public 隔开上线 box*/
 .publicSeptum {
 	width: 100%;

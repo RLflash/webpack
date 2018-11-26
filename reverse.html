@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+		
+   		
+		<title>对转</title>
+	</head>
+	<style>
+		.getmoney{height:1.5rem;line-height: 1.5rem;font-size: 0;color:#333;}
+		.getmoney i,.getmoney span{display:inline-block;font-size:0.28rem;vertical-align: middle;}
+		.getmoney span{margin-left: 0.2rem;font-size:0.4rem;}
+		/*'可对转金额'=>text*/
+		.thisTextNumber {
+			display: block;
+			float: left;
+		}
+		/*number*/
+		.thisNumberBox {
+			display: block;
+			float: left;
+			font-size: .4rem !important;
+		}
+		.thisNumber {
+			float: left;
+			display: block;
+			font-size: .4rem !important;
+		}
+		.account,.password,.money{background:#fff;height:1rem;position:relative}
+		.account input,.password input,.money input{font-size:0.3rem;border:none;position:absolute;top:0;bottom:0;left:0;right:0;display:block;margin:auto;width:90%;height:0.5rem;line-height:0.5rem;vertical-align: middle;}
+		.money{margin-top:0.1rem}
+		.getmoneymsg{font-size:0.25rem;margin:0.2rem auto 0.5rem;}
+		
+		/*input 样式修改*/
+		input::-webkit-input-placeholder { /* WebKit browsers */ 
+			color: #c6c6c6; 
+			font-size: .24rem;
+			font-family: "微软雅黑";
+			letter-spacing: .02rem;
+		} 
+		input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+			color: #c6c6c6; 
+			font-size: .24rem;
+			font-family: "微软雅黑";
+			letter-spacing: .02rem;
+		} 
+		input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+			color: #c6c6c6; 
+			font-size: .24rem;
+			font-family: "微软雅黑";
+			letter-spacing: .02rem;
+		} 
+		input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+			color: #c6c6c6; 
+			font-size: .24rem;
+			font-family: "微软雅黑";
+			letter-spacing: .02rem;
+		} 
+		#putForward {
+			margin-top: .8rem;
+		}
+		#reverseUser {
+			display: block;
+		    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		    margin: auto;
+		    width: 90%;
+		    height: .5rem;
+		    font: .26rem/.5rem "微软雅黑";
+		    color: #333;
+		}
+		input {
+			font-size: .26rem !important;
+			color: #333;
+		}
+	</style>
+	<body>
+		<!--最外边框-->
+		<div class="wrapper">
+			<!--头部Title,背景颜色class="headWrapColorOrange"-->
+			<div class="headWrap headWrapColorOrange">
+				<span class="returnImg" onclick="history.back(-1)"><img src="img/headWrap/topReturnKey.png"/></span>
+				<span>对转</span>
+				<!--按钮 => 绝对定位-->
+				<span class="hangSellButton hangSellButFourFont" onclick="window.location.href='./reverserecord.html'">对转记录</span>
+			</div>
+		
+			<div class="getmoney width90">
+				<i class="thisTextNumber">可对转金额</i>
+				<span class="thisNumberBox">
+					<i class="thisNumber">￥</i><i class="thisNumber" id="thisQuota"></i>
+				</span>
+			</div>
+			<div class="account">
+				<input type="text" id="turnAccount" placeholder="请输入对转账号" />
+			</div>
+			<div class="money">
+				<!--<input type="number" id="amountOfCash" placeholder="确认对转人信息"/>-->
+				<span id="reverseUser">对转人姓名:</span>
+			</div>
+			<div class="money">
+				<input type="number" id="amountOfMoney" placeholder="请输入金额"/>
+			</div>
+			
+			<div class="btn redbtn width90" id="putForward">
+				确定
+			</div>
+		</div>
+		
+	
+	</body>
+</html>
+
