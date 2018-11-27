@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //基本作用就是生成html文件
 const MiniCssExtractPlugin = require('mini-css-extract-plugin') //将多个css合并成一个css
 const OpenBrowserPlugin = require('open-browser-webpack-plugin') //自动打开浏览器
@@ -55,7 +56,7 @@ module.exports = {　　　　
 			},
 			{　　　　　
 				test: /\.html$/,
-				　　　　　　use: [{
+				use: [{
 					loader: 'html-loader',
 					options: {
 						
@@ -65,14 +66,38 @@ module.exports = {　　　　
 		]　　
 	},
 	　　devServer: {　　　　
-		inline: true,
-		　　　　port: 804　　
-	},
-	　　plugins: [
+			inline: true,
+		　　port: 804　　
+		},
+		optimization: {
+		    splitChunks: {
+		      chunks: 'all', 
+		      minSize: 30000,
+		      maxSize: 0,
+		      minChunks: 1,
+		      maxAsyncRequests: 5,
+		      maxInitialRequests: 3,
+		      automaticNameDelimiter: '~',
+		       name:'pulicone',
+		      cacheGroups: {
+		        vendors: {
+		          test: /[\\/]node_modules[\\/]/,
+		          priority: -10,
+		         
+		        },
+		        default: {
+		          minChunks: 2,
+		          priority: -20,
+		          reuseExistingChunk: true
+		        }
+		      }
+		    }
+		},
 
+	　　plugins: [
 		new OpenBrowserPlugin({
 			url: 'http://localhost:804'
-		}), 　　　　
+		}),　　　　
 		new HtmlWebpackPlugin({
 			template: './index.html',
 			filename: "../index.html",
@@ -85,7 +110,7 @@ module.exports = {　　　　
 				removeEmptyAttributes: true,
 				collapseWhitespace: true
 			},
-			chunks: ['indexjs']
+			chunks: ['indexjs','pulicone']
 		}),
 		new HtmlWebpackPlugin({
 			template: './reverse.html',
@@ -99,11 +124,12 @@ module.exports = {　　　　
 				removeEmptyAttributes: true,
 				collapseWhitespace: true
 			},
-			chunks: ['reversejs']
+			chunks: ['reversejs','pulicone']
 		}),
 		new MiniCssExtractPlugin({
 			filename: "css/[name].css",
 
-		})　　　　　
+		}),
+		 new BundleAnalyzerPlugin()　　　　
 	]
 }
